@@ -4,17 +4,22 @@
     "lint": "npx lint-staged",
     "eslint": "eslint --fix .",
     "commit": "cz",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "dev": "vite --mode=dev",
+    "build": "vite --mode=prod build"
   },
   "devDependencies": {
     "@antfu/eslint-config": "0.43.1",
     "commitizen": "4.3.0",
+    "cross-env": "7.0.3",
     "cz-conventional-changelog": "^3.3.0",
     "cz-customizable": "7.0.0",
     "eslint": "8.50.0",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.0",
-    "typescript": "5.2.2"
+    "typescript": "5.2.2",
+    "vite": "4.4.9",
+    "vue": "3.3.4"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx,vue}": [
