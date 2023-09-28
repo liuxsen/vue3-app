@@ -1,0 +1,35 @@
+{
+  "name": "rules",
+  "scripts": {
+    "lint": "npx lint-staged",
+    "eslint": "eslint --fix .",
+    "commit": "cz",
+    "postinstall": "husky install"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "0.43.1",
+    "commitizen": "4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "7.0.0",
+    "eslint": "8.50.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.0",
+    "typescript": "5.2.2"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx,vue}": [
+      "npm run eslint"
+    ],
+    "package.json": [
+      "npm run eslint"
+    ],
+    ".eslintrc.js": [
+      "npm run eslint"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
+  }
+}
